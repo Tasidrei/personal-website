@@ -1,0 +1,128 @@
+/* 1. Globales Reset & Box-Model (wie in der Pokémon-Aufgabe!) */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Allgemeine Styles & Hintergrund */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f4f6f9; /* Dezentes Hellgrau */
+  padding: 20px;
+}
+
+/* 3. Header & Navigation */
+header {
+  background-color: #1e293b; /* Elegantes Dunkelblau */
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header nav a {
+  color: #38bdf8; /* Frisches Hellblau */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* 4. Hauptbereich (Zentrierter Container) */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 5. Jede Sektion als schicke weiße Karte stylen */
+section {
+  background-color: #ffffff;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Weicher Schatten */
+}
+
+/* Profil-Sektion Besonderheit */
+section:has(img) {
+  text-align: center;
+}
+
+img {
+  border-radius: 50%; /* Macht das Profilbild rund */
+  border: 4px solid #1e293b;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Überschriften in den Sektionen */
+h3 {
+  color: #1e293b;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 5px;
+}
+
+/* Listen (Interessen & CV) */
+ul {
+  list-style-type: "⚡ "; /* Ein Blitz als Aufzählungszeichen */
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* 6. Links & Buttons */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 7. Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+/* Erste Karte (Profilbild) */
+section:nth-of-type(1) {
+  background-color: #ffffff;/* Sehr helles Blau */
+}
+
+/* Zweite Karte (Interessen & Skills) */
+section:nth-of-type(2) {
+  background-color: #ffffff; /* Warmes, helles Gelb/Amber */
+}
+
+/* Dritte Karte (Kontakt) */
+section:nth-of-type(3) {
+  background-color: #ffffff; /* Frisches, helles Grün */
+}
+
+/* Vierte Karte (Links) */
+section:nth-of-type(4) {
+  background-color: #ffffff; /* Sanftes, helles Lila */
+}
+
+/* Fünfte Karte (About myself) */
+section:nth-of-type(5) {
+  background-color: #ffffff; /* Zartes Hellrot/Rosa */
+}
