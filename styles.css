@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 /* 2. Allgemeine Styles & Hintergrund */
 body {
@@ -30,7 +33,7 @@ header h1 {
 }
 
 header nav a {
-  color: #38bdf8; /* Frisches Hellblau */
+  color: #38bdf8; /* Fresh light blue */
   text-decoration: none;
   font-weight: bold;
   margin: 0 10px;
@@ -77,7 +80,7 @@ h3 {
 
 /* Listen (Interessen & CV) */
 ul {
-  list-style-type: "⚡ "; /* Ein Blitz als Aufzählungszeichen */
+  list-style-type: "⚡ "; /* A lightning bolt as a bullet point */
   padding-left: 20px;
 }
 
@@ -102,27 +105,184 @@ footer {
   color: #64748b;
   font-size: 0.9rem;
 }
-/* Erste Karte (Profilbild) */
+/* First card (profile picture) */
 section:nth-of-type(1) {
-  background-color: #eff6ff;/* Sehr helles Blau */
+  background-color: #eff6ff;/* Very light blue */
 }
 
-/* Zweite Karte (Interessen & Skills) */
+/* Second card (interests & skills) */
 section:nth-of-type(2) {
-  background-color: #fef3c7; /* Warmes, helles Gelb/Amber */
+  background-color: #fef3c7; /* Warm, light yellow/amber */
 }
 
-/* Dritte Karte (Kontakt) */
+/* Third card (contact) */
 section:nth-of-type(3) {
-  background-color: #ecfdf5; /* Frisches, helles Grün */
+  background-color: #ecfdf5; /* Fresh, bright green */
 }
 
-/* Vierte Karte (Links) */
+/* Fourth card (links) */
 section:nth-of-type(4) {
-  background-color: #f5f3ff; /* Sanftes, helles Lila */
+  background-color: #f5f3ff; /* Soft, light purple */
 }
 
-/* Fünfte Karte (About myself) */
+/* Fifth card (about myself) */
 section:nth-of-type(5) {
-  background-color: #fff1f2; /* Zartes Hellrot/Rosa */
+  background-color: #fff1f2; /* Soft light red/pink */
+}
+/* The main container for both cards */
+.bio-container {
+  display: flex;
+  flex-wrap: wrap;       /* Makes the cards on mobile phones jump around */
+  gap: 24px;             /* Distance between the two maps */
+  align-items: stretch;  /*Ensures that both cards are automatically the same height */
+  margin-top: 20px;
+}
+
+/* The styling for the individual cards */
+.bio-card {
+  flex: 1;               /* Both cards share the space equally */
+  min-width: 300px;      /* From this width onwards, the layout breaks on smaller screens */
+  background-color: #fff8f6; /* A very bright, elegant orange (to match your flashes) */
+  padding: 24px;
+  border-radius: 12px;   /* Smoothly rounded corners */
+  border: 1px solid #ffdcd0;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px; /* Subtle shading for a sense of depth */
+}
+
+/* Headings within the maps */
+.bio-card h3 {
+  margin-top: 0;
+  color: #252629;
+  border-bottom: 2px solid #ffdcd0;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+/* --- My CV list styling from earlier --- */
+.cv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cv-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.05rem;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.cv-icon {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.cv-date {
+  width: 110px;
+  flex-shrink: 0;
+  color: #252629;
+}
+
+.cv-title {
+  color: #555555;
+}
+.interests-list {
+  list-style: none;     /* Removes standard bullet points */
+  padding-left: 0;      /* Aligns the list perfectly to the left */
+  margin-top: 16px;     
+  margin-bottom: 0;
+  display: flex;        
+  flex-direction: column; /* Stacks the items vertically */
+  gap: 12px;            /* Even vertical spacing between lines */
+}
+
+
+/* AUTOMATICALLY ADDS THE LIGHTNING BOLT */
+/* Only targets <li> elements that are direct children of .interests-list */
+.interests-list > li::before {
+  content: "⚡";        
+  margin-right: 10px;   
+  flex-shrink: 0;       
+}
+
+/* 1. Force the navigation container to be a full-width horizontal row */
+.navigation__menu {
+  display: flex ;
+  flex-direction: row;
+  justify-content: space-between; /* Matches your target image */
+  list-style: none ;
+  padding: 0 ;
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+/* 2. Style the orange button wrappers */
+.navigation__link {
+  background-color: #ff4a11; /* Bright orange from target image */
+  padding: 6px 16px;         /* Sizes the buttons nicely */
+  border-radius: 6px;        /* Smooth rounded corners */
+}
+
+/* 3. Style the anchor links inside the buttons */
+.navigation__link a {
+  color: #ffffff ;            /* Pure white text */
+  text-decoration: none;     /* Removes underlines */
+  font-weight: 500 ;
+  display: inline-block;
+}
+
+/* Styling for the tech stack badges */
+.personal-tech-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 0;
+  display: flex;        /* Place the badges side by side */
+  flex-wrap: wrap;      /* Makes them wrap to the next line if there isn't enough space */
+  gap: 10px;            /* At least 10px spacing on all sides */
+}
+
+.tech-badge {
+  background-color: #ffdcd0; /* To match the warm orange design */
+  color: #252629;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/* The layout for both galleries */
+.image-gallery {
+  display: flex;         /* Aligns the images horizontally side by side */
+  flex-wrap: wrap;       /* Allows images to wrap smoothly when space is limited */
+  gap: 12px;             /* Equal spacing between all images */
+  justify-content: flex-start; /* Align the images to the left */
+  margin-bottom: 15px;
+}
+
+/* Styling for the individual images */
+.image-gallery img {
+  width: calc(25% - 9px); /* Divides the space perfectly among 4 images per row */
+  min-width: 100px;       /* Prevents images from becoming too small on mobile devices */
+  height: 120px;
+  object-fit: cover;      /* Crops the images neatly into a square shape without distorting them */
+  border-radius: 8px;     /* Smooth, slightly rounded corners */
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 6px;
+  transition: transform 0.2s ease; /* Creates a subtle animation effect when hovering over images */
+}
+
+/* Small cool effect: Images zoom in slightly when hovering over them */
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* A specific class for your travel photos, in case you need extra styles later */
+.image-gallery.travel img {
+  border: 1px solid #ffdcd0; /* Optional thin border for the Travel category */
 }

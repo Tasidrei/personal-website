@@ -14,32 +14,61 @@
 <header>
     <h1>Harry Bruns</h1>
     <nav>
-        <a href="#contact">Contact</a> | 
-        <a href="#biography">Biography</a>
-    </nav>
+  <ul class="navigation__menu">
+    <li class="navigation__link"><a href="#about">About Me</a></li>
+    <li class="navigation__link"><a href="#skills">Skills</a></li>
+    <li class="navigation__link"><a href="#bio">Biography</a></li>
+    <li class="navigation__link"><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
 </header>
 <br> <!-- Creates a blank line -->
 <main>
     <!-- 2. Section: Photo and brief description -->
-    <section>
+<section>
         <!-- Platzhalter für ein Bild. Ersetze 'dein-bild.jpg' später mit deinem echten Dateinamen -->
         <img src="my_profile_image.png" alt="Profile picture of Harry Bruns" width="150" height="150">
 
         <p><em>profile image ("looking aside")</em></p>
-    </section>
+</section>
 
     <!-- 3. Section: Tags / Interests -->
-    <section>
+<section id="skills">
     <h3>Interests & Skills</h3>
-    <ul>
-        <li>Web Development (HTML, CSS, JavaScript)</li>
+    <ul class="interests-list">
+        <li> Web Development (HTML, CSS, JavaScript)</li>
         <li>Version Control with Git & GitHub</li>
         <li>Efficient & Lightweight Coding </li>
         <li>UI/UX Design</li>
         <li>Creative Problem Solving</li>
     </ul>
-    </section>
+</section>
 
+<section id="skill-and-interests">
+        <div class="bio-container">
+
+    <!-- LINKE KARTE: TECH STACK -->
+    <div class="bio-card">
+      <h3>My Tech Stack</h3>
+      <ul class="personal-tech-list">
+        <li class="tech-badge">HTML</li>
+        <li class="tech-badge">CSS</li>
+        <li class="tech-badge">JavaScript</li>
+        <li class="tech-badge">React.js</li>
+        <li class="tech-badge">Node.js</li>
+        <li class="tech-badge">Flexbox</li>
+        <li class="tech-badge">CSS Grid</li>
+        <li class="tech-badge">Git</li>
+        <li class="tech-badge">GitHub</li>
+        <li class="tech-badge">CodePen</li>
+        <li class="tech-badge">VS Code</li>
+        <li class="tech-badge">Responsive Design</li>
+        <li class="tech-badge">Cross-Browser Compatibility</li>
+      </ul>
+    </div>
+</div>
+</section>
 
     <!-- 4. Section: Contact Box -->
     <section id="contact">
@@ -49,24 +78,90 @@
     </section>
 
     <!-- 5. Section: Social-Links (GitHub, CodePen, LinkedIn) -->
-    <section>
+    <section id="bio">
         <h3>Links</h3>
         <a href="https://github.com/Tasidrei" target="_blank">GitHub</a> | 
-        <a href="#" target="_blank">CodePen</a> | 
-        <a href="#" target="_blank">LinkedIn</a>
+        <a href="https://codepen.io/Genitako" target="_blank">CodePen</a> | 
+        <a href="https://www.linkedin.com/in/harry-bruns/" target="_blank">LinkedIn</a>
     </section>
 
     <!-- 6. Section: About me & CV -->
-    <section id="biography">
-        <h3>About myself</h3>
-        <p>Hello! I'm Harry Bruns, an IT Support Specialist and aspiring Web Developer based in Hamburg. I enjoy building practical, user‑friendly websites and exploring new trends in coding. When I'm not learning something new, I love traveling and spending time with my cats.</p>
+    <section id="about">
+  <div class="bio-container">
+    
+    <!-- CARD 1: ABOUT MYSELF -->
+    <div class="bio-card">
+      <h3>About myself</h3>
+      <p>I’m Harry Bruns, an IT Support Specialist expanding into front end development. 
+        I’m focused on building accessible, responsive interfaces and improving my skills in HTML, CSS, and JavaScript. 
+        I enjoy solving problems, learning new tools, and turning ideas into working web experiences. 
+        Outside of tech, I’m passionate about travel, languages, and spending time with my cats.</p>
+    </div>
 
-        <h3>CV (Resume)</h3>
-        <ul>
-            <li><strong>2026:</strong> Web Development Bootcamp</li>
-            <li><strong>2008:</strong> A Level</li>
-        </ul>
-    </section>
+    <!-- CARD 2: CV RESUME -->
+    <div class="bio-card">
+      <h3>CV (Resume)</h3>
+      <ul class="cv-list">
+        <li class="cv-item">
+          <span class="cv-icon">⚡</span>
+          <strong class="cv-date">2023 - 2025:</strong> 
+          <span class="cv-title">IT Support Specialist</span>
+        </li>
+        <li class="cv-item">
+          <span class="cv-icon">⚡</span>
+          <strong class="cv-date">2022 - 2023:</strong> 
+          <span class="cv-title">IT System Engineer</span>
+        </li>
+        <li class="cv-item">
+          <span class="cv-icon">⚡</span>
+          <strong class="cv-date">2021 - 2022:</strong> 
+          <span class="cv-title">Support Engineer</span>
+        </li>
+        <li class="cv-item">
+          <span class="cv-icon">⚡</span>
+          <strong class="cv-date">2020 - 2021:</strong> 
+          <span class="cv-title">IT Technical Support</span>
+        </li>
+        <li class="cv-item">
+          <span class="cv-icon">⚡</span>
+          <strong class="cv-date">2015 - 2020:</strong> 
+          <span class="cv-title">IT Help Desk</span>
+        </li>
+        <li class="cv-item">
+          <span class="cv-icon">⚡</span>
+          <strong class="cv-date">2008:</strong> 
+          <span class="cv-title">A Level</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="bio-card">
+  <h3>Gallery</h3>
+  
+  <!-- CATEGORY 1: TRAVELLING -->
+  <h4>My Travels</h4>
+  <div class="image-gallery travel">
+    <!-- Place sources images here / src="./images/airplane.jpg" -->
+    <img src="Lufthansa.jpg" alt="Airplane" />
+    <img src="shutterstock_MSC.jpg" alt="Cruise Ship" />
+    <img src="New_Bus_for_London,.jpg" alt="Bus" />
+    <img src="Speed_Train.jpg" alt="Train" />
+  </div>
+
+  <!-- CATEGORY 2: DOMESTIC PETS -->
+  <h4 style="margin-top: 20px;">My Pets</h4>
+  <div class="image-gallery pets">
+    <img src="male-cat-neuter.jpg" alt="Cat 1" />
+    <img src="queen_cat_sitting.jpg" alt="Cat 2" />
+    <img src="o-cat-walking.jpg" alt="Cat 3" />
+    <img src="cali_cat_female.jpg" alt="Cat 4" />
+  </div>
+</div>
+
+
 </main>
 
 <!-- 7. Footer -->
