@@ -107,7 +107,7 @@ footer {
 }
 /* First card (profile picture) */
 section:nth-of-type(1) {
-  background-color: #eff6ff;/* Very light blue */
+  background-color: #fdf8f5;/* Very light blue */
 }
 
 /* Second card (interests & skills) */
@@ -147,7 +147,12 @@ section:nth-of-type(5) {
   border-radius: 12px;   /* Smoothly rounded corners */
   border: 1px solid #ffdcd0;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px; /* Subtle shading for a sense of depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+
 
 /* Headings within the maps */
 .bio-card h3 {
@@ -155,7 +160,8 @@ section:nth-of-type(5) {
   color: #252629;
   border-bottom: 2px solid #ffdcd0;
   padding-bottom: 8px;
-  margin-bottom: 16px;
+  padding-top: 8px;
+  margin-bottom: 15px;
   margin-top: 0;
 }
 
@@ -285,4 +291,17 @@ section:nth-of-type(5) {
 /* A specific class for your travel photos, in case you need extra styles later */
 .image-gallery.travel img {
   border: 1px solid #ffdcd0; /* Optional thin border for the Travel category */
+}
+/* Creates even horizontal and vertical spacing between the links */
+.sociallinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;       /* Adjust this value to increase or decrease the spacing */
+  margin-top: 15px;
+}
+
+/* Optional: Make the links look slightly bolder and cleaner */
+.social-links a {
+  font-weight: 500;
+  white-space: nowrap; /* Prevents a single link name from splitting onto two lines */
 }
