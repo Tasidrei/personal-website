@@ -107,28 +107,35 @@ footer {
 }
 /* First card (profile picture) */
 section:nth-of-type(1) {
-  background-color: #854f2f;/* Very light blue */
+  background-color: #ddc0af;/* Light Brown */
 }
 
 /* Second card (interests & skills) */
 section:nth-of-type(2) {
-  background-color: #2af302; /* Warm, light yellow/amber */
+  background-color: #2af302; /* Green */
 }
 
-/* Third card (contact) */
+/* Third card (my tech stack) */
 section:nth-of-type(3) {
-  background-color: #1c1274; /* Fresh, bright green */
+  background-color: #1c1274; /* Purple */
 }
 
-/* Fourth card (links) */
+/* Fourth card (contact) */
 section:nth-of-type(4) {
-  background-color: #359497; /* Soft, light purple */
+  background-color: tomato; /* Tomato */
 }
 
-/* Fifth card (about myself) */
+/* Fifth card (links) */
 section:nth-of-type(5) {
-  background-color: #8a3a3f; /* Soft light red/pink */
+  background-color: turquoise; /* Turquoise */
 }
+
+/* Sixth card (about myself & cv (resume)) */
+section:nth-of-type(6) {
+  background-color: #fbbf24; /* Warm, light yellow/amber */
+}
+
+
 /* The main container for both cards */
 .bio-container {
   display: flex;
@@ -150,7 +157,6 @@ section:nth-of-type(5) {
   flex-direction: column;
   justify-content: center;
 }
-
 
 
 /* Headings within the maps */
@@ -273,7 +279,7 @@ section:nth-of-type(5) {
 
 /* Styling for the individual images */
 .image-gallery img {
-  width: calc(25% - 9px); /* Divides the space perfectly among 4 images per row */
+  width: calc(50% - 6px); /* Divides the space perfectly among 4 images per row */
   min-width: 100px;       /* Prevents images from becoming too small on mobile devices */
   height: 120px;
   object-fit: cover;      /* Crops the images neatly into a square shape without distorting them */
@@ -282,9 +288,31 @@ section:nth-of-type(5) {
   transition: transform 0.2s ease; /* Creates a subtle animation effect when hovering over images */
 }
 
+
 /* Small cool effect: Images zoom in slightly when hovering over them */
 .image-gallery img:hover {
   transform: scale(1.05);
+}
+
+
+/* ==========================================================================
+   MEDIUM BREAKPOINT / TABLET (3 Columns - The middle image)
+   ========================================================================== */
+@media (min-width: 600px) {
+  .image-gallery img {
+    /* Divides space into 3 columns, accounting for two 12px gaps */
+    width: calc(33.33% - 8px); 
+  }
+}
+
+/* ==========================================================================
+   LARGE BREAKPOINT / DESKTOP (4 Columns - The first image)
+   ========================================================================== */
+@media (min-width: 900px) {
+  .image-gallery img {
+    /* Divides space into 4 columns, accounting for three 12px gaps */
+    width: calc(25% - 9px); 
+  }
 }
 
 /* A specific class for your travel photos, in case you need extra styles later */
